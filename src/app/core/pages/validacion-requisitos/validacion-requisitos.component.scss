@@ -1,0 +1,30 @@
+input {
+  position: relative;
+  width: 157px;
+  height: 45px;
+  flex-shrink: 0;
+  border-radius: 5px;
+  background: #f1f3f4;
+}
+
+.table-container {
+  height: 280px;
+  overflow: auto;
+}
+
+table {
+  background: #ffffff;
+  width: 100%;
+}
+
+.label-q {
+  display: flex;
+  padding-left: 24px;
+}
+
+.check-section {
+  padding-left: 20px;
+  mat-checkbox {
+    padding-left: 30px;
+  }
+}

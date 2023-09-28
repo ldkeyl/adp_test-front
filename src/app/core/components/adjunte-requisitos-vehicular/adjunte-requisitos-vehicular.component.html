@@ -1,0 +1,21 @@
+<div class="col-12">
+    <mat-label class="f-2-b">Adjunte los Requisitos del Vehículo:</mat-label>
+</div>
+
+<section class="example-container" tabindex="0">
+    <table mat-table [dataSource]="dataSource">
+
+        <ng-container matColumnDef="requisitos">
+            <th mat-header-cell *matHeaderCellDef>Requisitos</th>
+            <td mat-cell *matCellDef="let element">{{ element.requisitos }}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="archivo">
+            <th mat-header-cell *matHeaderCellDef>Archivo</th>
+            <td mat-cell *matCellDef="let element">{{ element.archivo }}</td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+    </table>
+</section>

@@ -1,0 +1,112 @@
+<div class="container container-adp">
+    <div class="row align-items-start">
+        <div class="col-12">
+            <mat-label class="f-1-b">Renovación de vigencia de Identificación Provisional</mat-label>
+        </div>
+    </div>
+    <br>
+    <div class="row align-items-start line_bottom">
+        <div class="col-12">
+            <mat-label class="f-2-b">Búsqueda</mat-label>
+        </div>
+        <div class="col-3">
+            <mat-label class="f-3-b">RUC.</mat-label>
+        </div>
+        <div class="col-3">
+            <mat-form-field>
+                <input class="f-3" matInput ngModel="" required name="" />
+            </mat-form-field>
+        </div>
+        <div class="col-3">
+            <mat-label class="f-3-b">Razón Social</mat-label>
+        </div>
+        <div class="col-3">
+            <mat-form-field>
+                <input class="f-3" matInput ngModel="" required name="" />
+            </mat-form-field>
+        </div>
+        <div class="col-3">
+            <mat-label>Razón social</mat-label>
+        </div>
+        <div class="col-3">
+            <mat-form-field>
+                <input matInput ngModel="" required name="" />
+            </mat-form-field>
+        </div>
+        <div class="col-3">
+            <mat-label class="f-3-b">Fecha de Solicitud</mat-label>
+        </div>
+        <div class="col-3">
+            <mat-label>01/01/2023</mat-label>
+        </div>
+        <div class="col-3">
+            <mat-label class="f-3-b">Estado</mat-label>
+        </div>
+        <div class="col-3">
+            <mat-label>01/01/2023</mat-label>
+        </div>
+        <br />
+        <br />
+        <div class="row justify-content-center">
+            <div class="col-4">
+                <button class="button button-color-v">Buscar</button>
+            </div>
+        </div>
+        <br />
+        <br>
+    </div>
+
+    <section tabindex="0" >
+        
+        <table mat-table [dataSource]="dataSource">
+          <!-- Position Column -->
+          <ng-container matColumnDef="nroSolicitud">
+            <th mat-header-cell *matHeaderCellDef>Nro de Solicitud</th>
+            <td mat-cell *matCellDef="let element">{{ element.nroSolicitud }}</td>
+          </ng-container>
+    
+          <!-- Name Column -->
+          <ng-container matColumnDef="empresa">
+            <th mat-header-cell *matHeaderCellDef>Empresa</th>
+            <td mat-cell *matCellDef="let element">{{ element.empresa }}</td>
+          </ng-container>
+
+          <ng-container matColumnDef="fechaSolicitud">
+            <th mat-header-cell *matHeaderCellDef>Fecha Solicitud</th>
+            <td mat-cell *matCellDef="let element">{{ element.fechaSolicitud }}</td>
+          </ng-container>
+
+          <ng-container matColumnDef="fechaVencimiento">
+            <th mat-header-cell *matHeaderCellDef>Fecha Vencimiento</th>
+            <td mat-cell *matCellDef="let element">{{ element.fechaVencimiento }}</td>
+          </ng-container>
+
+          <ng-container matColumnDef="estado">
+              <th mat-header-cell    *matHeaderCellDef>Estado</th>
+              <td mat-cell *matCellDef="let element" class="{{element.estado}}">{{ element.estado }}</td>
+            </ng-container>
+
+            <ng-container matColumnDef="cartaRenovacion">
+                <th mat-header-cell *matHeaderCellDef>Carta Renovación </th>
+                <td mat-cell *matCellDef="let element">{{ element.cartaRenovacion }}</td>
+              </ng-container>
+          <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+        </table>
+      </section>
+
+    <br>
+    <p class="line_bottom"></p>
+    <br />
+    <ul class="pagination">
+        <li><a href="#">&lt;&lt;</a></li>
+        <li><a href="#">&lt;</a></li>
+        <li><a href="#">Página 1 de 10</a></li>
+        <li><a href="#">&gt;</a></li>
+        <li><a href="#">&gt;&gt;</a></li>
+    </ul>
+    <br />
+    <br />
+    <br />
+    <br />
+</div>

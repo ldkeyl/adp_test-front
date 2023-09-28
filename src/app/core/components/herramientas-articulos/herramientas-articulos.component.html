@@ -1,0 +1,85 @@
+<div class="col-12 row">
+    <div class="col-6 row">
+        <div class="col-6">
+            <br>
+            <br>
+            <mat-label class="f-3-b">Tipo Herramienta</mat-label>
+        </div>
+        <div class="col-6">
+            <br>
+            <br>
+            <mat-select>
+                <mat-option *ngFor="let food of foods" [value]="food.value">
+                    {{food.viewValue}}
+                </mat-option>
+            </mat-select>
+        </div>
+
+        <div class="col-6">
+            <mat-label class="f-3-b">Nombre Herramienta</mat-label>
+        </div>
+        <div class="col-6 f-3">
+            <mat-form-field class="custom-input">
+                <input matInput placeholder="" value="Andamio" />
+            </mat-form-field>
+        </div>
+
+        <div class="col-6">
+            <mat-label class="f-3-b">Marca</mat-label>
+        </div>
+        <div class="col-6 f-3">
+            <mat-form-field class="custom-input">
+                <input matInput placeholder="" value="Dato Marca" />
+            </mat-form-field>
+        </div>
+
+        <div class="col-6">
+            <mat-label class="f-3-b">Modelo</mat-label>
+        </div>
+        <div class="col-6 f-3">
+            <mat-form-field class="custom-input">
+                <input matInput placeholder="" value="Dato Modelo" />
+            </mat-form-field>
+        </div>
+
+        <div class="col-6">
+            <mat-label class="f-3-b">N° Serie</mat-label>
+        </div>
+        <div class="col-6 f-3">
+            <mat-form-field class="custom-input">
+                <input matInput placeholder="" value="ABC123" />
+            </mat-form-field>
+        </div>
+
+        <div class="col-6">
+            <mat-label class="f-3-b">Cantidad</mat-label>
+        </div>
+        <div class="col-6 f-3">
+            <input matInput type="number" value="1">
+        </div>
+    </div>
+    <div class="col-6">
+        <div class="col-12 row">
+            <mat-label class="f-3-b p-t-10 p-b-30">Subir Imagen de Herramienta:</mat-label>
+            <div class="col-6">
+                <img src="assets/img/image.png" alt="image" />
+            </div>
+            <div class="col-6 row">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path
+                        d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+                        stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M12 16V12" stroke="black" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    <path d="M12 8H12.01" stroke="black" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                </svg>
+                <mat-label class="f-3 a">La fotografía debe tener un fondo blanco y estar en formato jpg.</mat-label>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<app-zona-accesos></app-zona-accesos>

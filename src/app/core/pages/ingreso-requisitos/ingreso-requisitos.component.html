@@ -1,0 +1,55 @@
+<div class="container container-adp">
+  <div class="row align-items-start">
+    <div class="col-3">
+      <mat-label><b>N° de solicitud</b></mat-label>
+    </div>
+    <div class="col-3">
+      <mat-form-field class="example-full-width">
+        <input matInput placeholder="Nro Solicitud" value="999999" />
+      </mat-form-field>
+    </div>
+  </div>
+  <div class="col-12">
+    <mat-label><b>Buscar empresa</b></mat-label>
+  </div>
+  <app-buscar-empresa></app-buscar-empresa>
+  <app-datos-representante-legal></app-datos-representante-legal>
+
+  <div class="row align-items-start">
+    <div class="col-12">
+      <mat-label><b>Ingreso de requisitos</b></mat-label>
+    </div>
+  </div>
+
+  <section class="example-container" tabindex="0">
+    <table mat-table [dataSource]="dataSource">
+      <!-- Position Column -->
+      <ng-container matColumnDef="requisito">
+        <th mat-header-cell *matHeaderCellDef>Requisito</th>
+        <td mat-cell *matCellDef="let element">{{ element.requisito }}</td>
+      </ng-container>
+
+      <!-- Name Column -->
+      <ng-container matColumnDef="archivo">
+        <th mat-header-cell *matHeaderCellDef>Archivo</th>
+        <td mat-cell *matCellDef="let element">{{ element.archivo }}</td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+    </table>
+  </section>
+
+  <br>
+  <p class="line_bottom"></p>
+  <br />
+  <br />
+  <div class="row justify-content-center">
+    <div class="col-4">
+      <button class="button button-color-w">Guardar</button>
+    </div>
+    <div class="col-4">
+      <button class="button button-color-g" (click)="consultaSolicitud()">Enviar Requisitos</button>
+    </div>
+  </div>
+</div>

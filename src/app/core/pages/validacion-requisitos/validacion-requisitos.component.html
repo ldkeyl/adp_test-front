@@ -1,0 +1,96 @@
+<div class="container container-adp">
+  <div class="col-12">
+    <mat-label><b>Validación de requisitos</b></mat-label>
+  </div>
+  <br />
+
+  <div class="row align-items-start">
+    <div class="col-3">
+      <mat-label><b>N° de solicitud</b></mat-label>
+    </div>
+    <div class="col-3">
+      <mat-form-field class="example-full-width">
+        <input matInput placeholder="Nro Solicitud" value="999999" />
+      </mat-form-field>
+    </div>
+  </div>
+  <app-buscar-empresa></app-buscar-empresa>
+  <div class="row align-items-start line_bottom">
+    <div class="col-12">
+      <mat-label><b>Datos representante legal</b></mat-label>
+    </div>
+    <div class="col-3">
+      <mat-label><b>Nombres y Apellidos</b></mat-label>
+    </div>
+    <div class="col-9">
+      <mat-label> Pedro Fernando Gomez Gomez</mat-label>
+    </div>
+    <div class="col-3">
+      <mat-label><b>Tipo de Documento</b></mat-label>
+    </div>
+    <div class="col-9">
+      <mat-label>DNI</mat-label>
+    </div>
+    <div class="col-3">
+      <mat-label><b>N° de documento</b></mat-label>
+    </div>
+    <div class="col-9">
+      <mat-label>71734434</mat-label>
+    </div>
+    <br />
+    <br />
+  </div>
+  <section class="table-container" tabindex="0">
+    <table mat-table [dataSource]="dataSource">
+      <!-- Position Column -->
+      <ng-container matColumnDef="requisito">
+        <th mat-header-cell *matHeaderCellDef>Requisito</th>
+        <td mat-cell *matCellDef="let element">{{ element.requisito }}</td>
+      </ng-container>
+
+      <!-- Name Column -->
+      <ng-container matColumnDef="archivo">
+        <th mat-header-cell *matHeaderCellDef>Archivo</th>
+        <td mat-cell *matCellDef="let element">{{ element.archivo }}</td>
+      </ng-container>
+
+      <!-- Name Column -->
+      <ng-container matColumnDef="aprobar">
+        <th mat-header-cell *matHeaderCellDef>Aprobar</th>
+        <td mat-cell *matCellDef="let element">{{ element.aprobar }}</td>
+      </ng-container>
+
+      <!-- Name Column -->
+      <ng-container matColumnDef="rechazar">
+        <th mat-header-cell *matHeaderCellDef>Rechazar</th>
+        <td mat-cell *matCellDef="let element">{{ element.rechazar }}</td>
+      </ng-container>
+
+      <!-- Name Column -->
+      <ng-container matColumnDef="motivo">
+        <th mat-header-cell *matHeaderCellDef>Motivo</th>
+        <td mat-cell *matCellDef="let element">{{ element.motivo }}</td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+    </table>
+  </section>
+
+  <div class="row justify-content-center line_bottom">
+    <br>
+    <br>
+
+  </div>
+  <br>
+  <br>
+  <div class="row justify-content-center">
+    <div class="col-4">
+      <button class="button button-color-w">Guardar</button>
+    </div>
+    <div class="col-4">
+      <button class="button button-color-g" (click)="requisitos()">Enviar Resultados</button>
+    </div>
+  </div>
+
+</div>

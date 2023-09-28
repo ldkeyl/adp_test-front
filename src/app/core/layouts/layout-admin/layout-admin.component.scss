@@ -1,0 +1,133 @@
+mat-drawer-container {
+  min-height: 100vh;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  img {
+    width: 80%;
+  }
+}
+mat-drawer {
+  background-color: #f7f7f7;
+  width: 391px;
+  .image-1 {
+    position: relative;
+    top: 72px;
+    left: 176px;
+  }
+  .image-2 {
+    position: relative;
+    top: 640px;
+    left: -78px;
+  }
+}
+
+mat-toolbar {
+  background-color: #ffffff;
+}
+
+.sidebar {
+  .drawer__list {
+    .drawer__item {
+      padding: 0 !important;
+      height: 58px;
+      text-align: start;
+      margin-bottom: 10px;
+      .item__text {
+        font-size: 25px;
+        font-weight: 700;
+        line-height: 30px;
+        letter-spacing: 0em;
+        color: #000000;
+        margin: 0;
+      }
+    }
+  }
+  .bd-highlight {
+    margin-right: 53px;
+    padding-bottom: 20px;
+  }
+  .modulos {
+    width: 224px;
+    .modulos__item {
+      border-top: 1px solid #c6c6c6;
+    }
+    .item__text {
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 24px;
+      letter-spacing: 0em;
+      text-align: left;
+
+      color: #c6c6c6;
+      margin: 0;
+      padding: 15px;
+    }
+  }
+  .mat-ripple-element {
+    left: 0 !important;
+  }
+  .item_url {
+    display: flex !important;
+  }
+  .routerTitle {
+    width: 210px;
+    overflow: hidden;
+    // display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    line-height: 30px;
+    white-space: pre-wrap;
+  }
+  .sidebar-img {
+    position: relative;
+    left: 45px;
+    top: 42px;
+  }
+  .active {
+    background-color: #e5008f;
+  }
+  .routerActice {
+    width: 10px;
+    height: 58px;
+    display: flex;
+  }
+}
+
+.content__toolbar {
+  height: 78px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  mat-toolbar-row {
+    margin-right: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .profile {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      column-gap: 15px;
+
+      .profile__data {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        right: 149px;
+      }
+      .item__icon {
+        font-size: 42px;
+        height: 35px;
+        width: 40px;
+      }
+    }
+  }
+}

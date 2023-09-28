@@ -1,0 +1,161 @@
+<div class="container container-adp">
+    <div class="row align-items-start">
+        <div class="col-12">
+            <mat-label class="f-1-b">Bandeja de validación de solicitudes
+                de identificaciones</mat-label>
+        </div>
+    </div>
+    <br>
+    <div class="col-12 row">
+        <mat-label class="f-2-b">Nivel de Validación</mat-label>
+        <mat-label class="f-3-b">Validador de Aeropuerto - Sede Cajamarca</mat-label>
+    </div>
+    <div class="row align-items-start line_bottom">
+        <div class="col-12">
+            <mat-label class="f-2-b">Búsqueda</mat-label>
+        </div>
+        <div class="col-3">
+            <mat-label class="f-3-b">RUC.</mat-label>
+        </div>
+        <div class="col-3">
+            <mat-form-field class="custom-input">
+                <input matInput ngModel="" required name="" />
+            </mat-form-field>
+        </div>
+        <div class="col-3">
+            <mat-label class="f-3-b">Tipo de empresa</mat-label>
+        </div>
+        <div class="col-3">
+            <mat-label>Seleccionar</mat-label>
+        </div>
+        <div class="col-3">
+            <mat-label class="f-3-b">Razón social</mat-label>
+        </div>
+        <div class="col-3">
+            <mat-form-field class="custom-input">
+                <input matInput ngModel="" required name="" />
+            </mat-form-field>
+        </div>
+        <div class="col-3">
+            <mat-label class="f-3-b">Fecha de Solicitud</mat-label>
+        </div>
+        <div class="col-3">
+            <mat-label>01/01/2023</mat-label>
+        </div>
+
+        <div class="col-3">
+            <mat-label class="f-3-b">Nro de Solicitud</mat-label>
+        </div>
+        <div class="col-3">
+            <mat-form-field class="custom-input">
+                <input matInput ngModel="" required name="" />
+            </mat-form-field>
+        </div>
+
+        <div class="col-3">
+            <mat-label class="f-3-b">Estado</mat-label>
+        </div>
+        <div class="col-3">
+            <mat-form-field class="custom-input">
+                <input matInput ngModel="" required name="" />
+            </mat-form-field>
+        </div>
+
+        <div class="col-3">
+            <mat-label class="f-3-b">Tipo identificación</mat-label>
+        </div>
+        <div class="col-3">
+            <mat-form-field class="custom-input">
+                <input matInput ngModel="" required name="" />
+            </mat-form-field>
+        </div>
+
+        <br />
+        <br />
+        <div class="row justify-content-center">
+            <div class="col-4">
+                <button class="button button-color-v">Buscar</button>
+            </div>
+        </div>
+        <br />
+        <br>
+    </div>
+</div>
+
+<section tabindex="0">
+
+    <table mat-table [dataSource]="dataSource">
+        <!-- Position Column -->
+
+        <ng-container matColumnDef="nroSolicitud">
+            <th mat-header-cell *matHeaderCellDef>Nro de Solicitud</th>
+            <td mat-cell *matCellDef="let element">{{ element.nroSolicitud }}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="tipoId">
+            <th mat-header-cell *matHeaderCellDef>Tipo ID</th>
+            <td mat-cell *matCellDef="let element">{{ element.tipoId }}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="ruc">
+            <th mat-header-cell *matHeaderCellDef>RUC</th>
+            <td mat-cell *matCellDef="let element">{{ element.ruc }}</td>
+        </ng-container>
+
+
+        <ng-container matColumnDef="empresa">
+            <th mat-header-cell *matHeaderCellDef>Empresa</th>
+            <td mat-cell *matCellDef="let element">{{ element.empresa }}</td>
+        </ng-container>
+
+        <!-- Name Column -->
+        <ng-container matColumnDef="fechaSolicitud">
+            <th mat-header-cell *matHeaderCellDef>Fecha Solicitud</th>
+            <td mat-cell *matCellDef="let element">{{ element.fechaSolicitud }}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="estado">
+            <th mat-header-cell *matHeaderCellDef>Estado</th>
+            <td mat-cell *matCellDef="let element" class="{{element.estado}}">{{ element.estado }}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="validarIds">
+            <th mat-header-cell *matHeaderCellDef>Validar IDs</th>
+            <td mat-cell *matCellDef="let element"><button class="button button-table">
+                    <p class="p-table">{{ element.validarIds }}</p>
+                </button></td>
+        </ng-container>
+
+        <ng-container matColumnDef="validadorAeropuerto">
+            <th mat-header-cell *matHeaderCellDef>Validador Aeropuerto</th>
+            <td mat-cell *matCellDef="let element">{{ element.validadorAeropuerto }}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="validadorSedeCentral">
+            <th mat-header-cell *matHeaderCellDef>Validador Sede Central</th>
+            <td mat-cell *matCellDef="let element">{{ element.validadorSedeCentral }}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="emisorIds">
+            <th mat-header-cell *matHeaderCellDef>Emisor IDs Sede Central</th>
+            <td mat-cell *matCellDef="let element">{{ element.emisorIds }}</td>
+        </ng-container>
+        <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+    </table>
+</section>
+
+<br>
+<p class="line_bottom"></p>
+<br />
+<ul class="pagination">
+    <li><a href="#">&lt;&lt;</a></li>
+    <li><a href="#">&lt;</a></li>
+    <li><a href="#">Página 1 de 10</a></li>
+    <li><a href="#">&gt;</a></li>
+    <li><a href="#">&gt;&gt;</a></li>
+</ul>
+<br />
+<br />
+<br />
+<br />

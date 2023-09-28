@@ -1,0 +1,38 @@
+<div mat-dialog-content>
+    <div class="row">
+      Ingresar campos de valores
+      <br>
+      <br>
+      <div class="row">
+        <div
+          style="display: flex; justify-content: flex-end"
+        >
+          <button
+            style="
+              background-color: #00be50 !important;
+              color: white !important;
+              margin: 0 15px;
+            "
+            mat-button
+            class="btn-directory btn-disabled"
+            type="button" >
+            Aceptar
+          </button>
+          <button
+                style="
+                  background-color: red !important;
+                  color: white !important;
+                  margin: 0 15px;
+                "
+                mat-button
+                class="btn-directory btn-disabled"
+                (click)="onNoClick()"
+                type="button"
+              >
+                Cancelar
+              </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  

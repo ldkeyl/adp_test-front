@@ -1,0 +1,40 @@
+div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 1054px;
+  height: 633px;
+}
+img {
+  position: relative;
+  width: 60.55px;
+  height: 52px;
+  flex-shrink: 0;
+  top: 200px;
+}
+
+p {
+  position: relative;
+  top: 245px;
+  color: #333;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+button {
+  position: relative;
+  width: 244px;
+  height: 52px;
+  flex-shrink: 0;
+  border-radius: 100px;
+  border: 1px solid #799900;
+  background-color: transparent;
+  top: 309px;
+  color: #799900;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
